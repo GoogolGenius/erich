@@ -6,7 +6,8 @@ const projects = [
   },
   {
     name: 'Plane',
-    description: 'A simple and dynamic asynchronous wrapper for the Ravy API.',
+    description:
+      'A simple and dynamic asynchronous Python wrapper for the Ravy API.',
     link: 'https://github.com/GoogleGenius/plane',
   },
   {

@@ -3,6 +3,7 @@ import projects from './assets/data/projects';
 import Card from './components/Card';
 import Footer from './components/Footer';
 import Profile from './components/Profile';
+import YouTube from './components/YouTube';
 import { FC } from 'react';
 
 const App: FC = (): JSX.Element => {
@@ -15,7 +16,10 @@ const App: FC = (): JSX.Element => {
             <Card key={index} {...project} />
           ))}
         </div>
-        <Footer />
+        <div className="App__footer">
+          <YouTube />
+          <Footer />
+        </div>
       </div>
     </div>
   );
