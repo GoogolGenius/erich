@@ -9,7 +9,12 @@ interface AnchorButtonProps {
 const AnchorButton: FC<AnchorButtonProps> = ({ text, link }): JSX.Element => {
   return (
     <div className="AnchorButton">
-      <a href={link} className="AnchorButton__anchor">
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="AnchorButton__anchor"
+      >
         {text}
       </a>
     </div>
