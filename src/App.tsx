@@ -1,5 +1,5 @@
 import './App.css';
-import projects from './assets/data/projects';
+import projects from './data/projects';
 import Card from './components/Card';
 import Footer from './components/Footer';
 import Profile from './components/Profile';

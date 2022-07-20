@@ -1,4 +1,4 @@
-import channels from '../assets/data/channels';
+import channels from '../data/channels';
 import AnchorButton from './AnchorButton';
 import './YouTube.css';
 import { FC } from 'react';

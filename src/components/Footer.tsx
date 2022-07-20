@@ -1,4 +1,4 @@
-import links from '../assets/data/links';
+import links from '../data/links';
 import './Footer.css';
 import { FC } from 'react';
 
