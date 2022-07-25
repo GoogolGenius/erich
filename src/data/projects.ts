@@ -1,5 +1,15 @@
 const projects = [
   {
+    name: 'Magnify',
+    description: 'A single platform for all the courses.',
+    link: 'https://github.com/magnifydev/magnify',
+  },
+  {
+    name: 'Scripty',
+    description: 'Envision a bot.',
+    link: 'https://github.com/scriptydev/prescripty',
+  },
+  {
     name: 'LMRA',
     description: 'Lawn mower rights matter. Period.',
     link: 'https://github.com/lmraorg/LMRA',
@@ -9,16 +19,6 @@ const projects = [
     description:
       'A simple and dynamic asynchronous Python wrapper for the Ravy API.',
     link: 'https://github.com/GoogleGenius/plane',
-  },
-  {
-    name: 'Scripty',
-    description: 'Envision a bot.',
-    link: 'https://github.com/scriptydev/prescripty',
-  },
-  {
-    name: 'Magnify',
-    description: 'A single platform for all the courses.',
-    link: 'https://github.com/magnifydev/magnify',
   },
   {
     name: 'Someone',
