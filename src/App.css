@@ -33,13 +33,9 @@
 }
 
 .App__footer {
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-}
-
-.App__footer > .YouTube > .AnchorButton {
+  justify-content: flex-end;
   width: 100%;
 }
 
@@ -51,18 +47,5 @@
   .App__grid > .Profile {
     grid-column: span 2;
     grid-row: span 2;
-  }
-
-  .App__footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: 1.5rem;
-  }
-
-  .App__footer > .YouTube > .AnchorButton {
-    width: revert;
   }
 }

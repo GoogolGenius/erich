@@ -1,9 +1,8 @@
 import './App.css';
-import projects from './data/projects';
 import Card from './components/Card';
 import Footer from './components/Footer';
 import Profile from './components/Profile';
-import YouTube from './components/YouTube';
+import projects from './data/projects';
 import { FC } from 'react';
 
 const App: FC = (): JSX.Element => {
@@ -17,7 +16,6 @@ const App: FC = (): JSX.Element => {
           ))}
         </div>
         <div className="App__footer">
-          <YouTube />
           <Footer />
         </div>
       </div>
