@@ -37,7 +37,7 @@ const Profile: FC = (): JSX.Element => {
           link="https://x.com/_GoogleGenius_"
         />
         <AnchorButton
-          text="SO"
+          text="Stack Overflow"
           link="https://stackoverflow.com/users/16394485/googlegenius"
         />
         <AnchorButton text="Email" link="mailto:erich.nguyen@outlook.com" />
