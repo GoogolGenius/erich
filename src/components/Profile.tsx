@@ -7,7 +7,7 @@ const Profile: FC = (): JSX.Element => {
   const timeoutIdRef = useRef<NodeJS.Timeout>();
   const handleDiscordButton = (): void => {
     setDiscordButtonText('Copied!');
-    navigator.clipboard.writeText('GoogleGenius#7487');
+    navigator.clipboard.writeText('@googlegenius');
     clearTimeout(timeoutIdRef.current);
     timeoutIdRef.current = setTimeout(() => {
       setDiscordButtonText('Discord');
@@ -33,8 +33,8 @@ const Profile: FC = (): JSX.Element => {
           {discordButtonText}
         </button>
         <AnchorButton
-          text="Twitter"
-          link="https://twitter.com/_GoogleGenius_"
+          text="X"
+          link="https://x.com/_GoogleGenius_"
         />
         <AnchorButton
           text="SO"
