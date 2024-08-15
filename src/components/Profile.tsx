@@ -23,8 +23,11 @@ const Profile: FC = (): JSX.Element => {
         </h1>
         <h2 className="Profile__header--secondary">GoogleGenius</h2>
         <p className="Profile__paragraph">
-          A developer in the United States working on various projects and
-          currently learning Python as well as web development.
+          A software developer interested in the intersection between 
+          computer science and medicine, planning to pursue specialization 
+          in computational biology/bioinformatics or other related fields.
+          Knowledgable in web development with TypeScript and React.JS, 
+          Python, Java, and currently learning C++.
         </p>
       </div>
       <div className="Profile__links">
