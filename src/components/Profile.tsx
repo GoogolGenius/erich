@@ -31,17 +31,17 @@ const Profile: FC = (): JSX.Element => {
         </p>
       </div>
       <div className="Profile__links">
-        <AnchorButton text="GitHub" link="https://github.com/GoogleGenius" />
+        <AnchorButton text="GitHub" link="https://github.com/GoogolGenius" />
         <button onClick={handleDiscordButton} className="discord__button">
           {discordButtonText}
         </button>
         <AnchorButton
           text="X"
-          link="https://x.com/_GoogleGenius_"
+          link="https://x.com/GoogolGenius"
         />
         <AnchorButton
           text="Stack Overflow"
-          link="https://stackoverflow.com/users/16394485/googlegenius"
+          link="https://stackoverflow.com/users/16394485/googolgenius"
         />
         <AnchorButton text="Email" link="mailto:erich.nguyen@outlook.com" />
       </div>
