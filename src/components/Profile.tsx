@@ -7,7 +7,7 @@ const Profile: FC = (): JSX.Element => {
   const timeoutIdRef = useRef<NodeJS.Timeout>();
   const handleDiscordButton = (): void => {
     setDiscordButtonText('Copied!');
-    navigator.clipboard.writeText('@googlegenius');
+    navigator.clipboard.writeText('@googolgenius');
     clearTimeout(timeoutIdRef.current);
     timeoutIdRef.current = setTimeout(() => {
       setDiscordButtonText('Discord');
