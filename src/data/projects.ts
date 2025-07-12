@@ -8,7 +8,7 @@ const projects = [
     name: 'RavyAPI.py',
     description:
       'A simple and dynamic asynchronous Python wrapper for the Ravy API.',
-    link: 'https://github.com/GoogleGenius/plane',
+    link: 'https://github.com/GoogolGenius/ravyapi.py',
   },
   {
     name: 'Scripty',
@@ -19,7 +19,7 @@ const projects = [
     name: 'Fintrack',
     description:
       'Financial planning app for the FBLA Coding & Programming event.',
-    link: 'https://github.com/GoogleGenius/fintrack',
+    link: 'https://github.com/GoogolGenius/fintrack',
   },
   {
     name: 'Chronos',
