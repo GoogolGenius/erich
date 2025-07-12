@@ -385,6 +385,16 @@
     min-height: auto;
   }
 
+  /* hide all animated shapes on mobile/tablet */
+  .Profile__title::before,
+  .Profile__contact-button::after,
+  .Profile__card::before,
+  .Profile__name::after,
+  .Profile__left::after,
+  .Profile__right::after {
+    display: none;
+  }
+
   .Profile__name {
     bottom: -25px;
     font-size: 2rem;

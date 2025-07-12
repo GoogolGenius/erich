@@ -97,11 +97,12 @@ const Profile: FC = (): JSX.Element => {
       <div className="Profile__right">
         <h1 className="Profile__title">STUDENT SOFTWARE DEVELOPER</h1>
         <p className="Profile__bio">
-          Software developer focused on the intersection of computer science and
-          medicine, with interests in computational biology and bioinformatics.
-          Experienced in full-stack web development using TypeScript, React.JS,
-          Python, and Java; currently learning C++. Projects span robotics, STEM
-          outreach, and research applying software to real-world challenges.
+          Student dev focused on the intersection of CS and bio, with
+          interests in computational biology and bioinformatics. Experienced in
+          full-stack web dev using TypeScript, React.JS, Python, and Java;
+          learning C++. Projects span robotics, STEM outreach, and research
+          involving barcoded transposon libraries as well as ML models on Marfan
+          syndrome.
         </p>
         <a
           className="Profile__contact-button"

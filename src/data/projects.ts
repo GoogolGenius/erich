@@ -5,20 +5,27 @@ const projects = [
     link: 'https://github.com/magnifydev/magnify',
   },
   {
-    name: 'Plane',
+    name: 'RavyAPI.py',
     description:
       'A simple and dynamic asynchronous Python wrapper for the Ravy API.',
     link: 'https://github.com/GoogleGenius/plane',
   },
   {
     name: 'Scripty',
-    description: 'Envision a bot.',
+    description: 'Envision a Discord bot.',
     link: 'https://github.com/scriptydev/prescripty',
   },
   {
-    name: '@Someone',
-    description: 'Bringing @someone back to Discord.',
-    link: 'https://github.com/GoogleGenius/someone',
+    name: 'Fintrack',
+    description:
+      'Financial planning app for the FBLA Coding & Programming event.',
+    link: 'https://github.com/GoogleGenius/fintrack',
+  },
+  {
+    name: 'Chronos',
+    description:
+      '4324 Lost in Time FIRST Tech Challenge robot for INTO THE DEEP.',
+    link: 'https://github.com/GoogolGenius/chronos/tree/teleop',
   },
 ];
 
