@@ -1,12 +1,8 @@
 import avatar from '../assets/erich-close-headshot.jpeg';
 import './Profile.css';
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC } from 'react';
 
 const Profile: FC = (): JSX.Element => {
-  const timeoutIdRef = useRef<NodeJS.Timeout>();
-
-  useEffect(() => clearTimeout(timeoutIdRef.current), []);
-
   return (
     <div className="Profile">
       <div className="Profile__left">
@@ -97,12 +93,11 @@ const Profile: FC = (): JSX.Element => {
       <div className="Profile__right">
         <h1 className="Profile__title">STUDENT SOFTWARE DEVELOPER</h1>
         <p className="Profile__bio">
-          Student dev focused on the intersection of CS and bio, with
-          interests in computational biology and bioinformatics. Experienced in
-          full-stack web dev using TypeScript, React.JS, Python, and Java;
-          learning C++. Projects span robotics, STEM outreach, and research
-          involving barcoded transposon libraries as well as ML models on Marfan
-          syndrome.
+          Student dev focused on the intersection of CS and bio, with interests
+          in computational biology and bioinformatics. Experienced in full-stack
+          web dev using TypeScript, React.JS, Python, and Java; learning C++.
+          Projects span robotics, STEM outreach, and research involving barcoded
+          transposon libraries as well as ML models on Marfan syndrome.
         </p>
         <a
           className="Profile__contact-button"
