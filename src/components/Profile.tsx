@@ -1,49 +1,114 @@
-import AnchorButton from './AnchorButton';
+import avatar from '../assets/erich-close-headshot.jpeg';
 import './Profile.css';
 import { FC, useEffect, useRef, useState } from 'react';
 
 const Profile: FC = (): JSX.Element => {
-  const [discordButtonText, setDiscordButtonText] = useState('Discord');
   const timeoutIdRef = useRef<NodeJS.Timeout>();
-  const handleDiscordButton = (): void => {
-    setDiscordButtonText('Copied!');
-    navigator.clipboard.writeText('@googolgenius');
-    clearTimeout(timeoutIdRef.current);
-    timeoutIdRef.current = setTimeout(() => {
-      setDiscordButtonText('Discord');
-    }, 1000);
-  };
+
   useEffect(() => clearTimeout(timeoutIdRef.current), []);
 
   return (
     <div className="Profile">
-      <div className="Profile__content">
-        <h1 className="Profile__header--primary">
-          <span className="underline">Erich Nguyen</span>
-        </h1>
-        <h2 className="Profile__header--secondary">GoogleGenius</h2>
-        <p className="Profile__paragraph">
-          A software developer interested in the intersection between 
-          computer science and medicine, planning to pursue specialization 
-          in computational biology/bioinformatics or other related fields.
-          Knowledgable in web development with TypeScript and React.JS, 
-          Python, Java, and currently learning C++.
-        </p>
+      <div className="Profile__left">
+        {/* Socials */}
+        <div className="Profile__social-icons">
+          <a
+            href="https://x.com/GoogolGenius"
+            className="Profile__social-icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/icons/twitter.svg"
+              alt="Twitter"
+              className="Profile__social-icon-svg"
+            />
+          </a>
+          <a
+            href="https://github.com/GoogolGenius"
+            className="Profile__social-icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/icons/github.svg"
+              alt="GitHub"
+              className="Profile__social-icon-svg"
+            />
+          </a>
+          <a
+            href="https://stackoverflow.com/users/16394485/googolgenius"
+            className="Profile__social-icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/icons/stackoverflow-icon.svg"
+              alt="Stack Overflow"
+              className="Profile__social-icon-svg"
+            />
+          </a>
+          <a
+            href="mailto:erich.nguyen@outlook.com"
+            className="Profile__social-icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/icons/mail.svg"
+              alt="Email"
+              className="Profile__social-icon-svg"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/erich-nguyen"
+            className="Profile__social-icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/icons/linkedin.svg"
+              alt="LinkedIn"
+              className="Profile__social-icon-svg"
+            />
+          </a>
+          <a
+            href="https://discord.com/users/732271287002726402"
+            className="Profile__social-icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/icons/discord.svg"
+              alt="Discord"
+              className="Profile__social-icon-svg"
+            />
+          </a>
+        </div>
+
+        {/* Profile Card */}
+        <div className="Profile__card">
+          <img src={avatar} alt="Erich Nguyen" className="Profile__portrait" />
+          <h2 className="Profile__name">ERICH NGUYEN</h2>
+          <p className="Profile__description">@GoogolGenius</p>
+        </div>
       </div>
-      <div className="Profile__links">
-        <AnchorButton text="GitHub" link="https://github.com/GoogolGenius" />
-        <button onClick={handleDiscordButton} className="discord__button">
-          {discordButtonText}
-        </button>
-        <AnchorButton
-          text="X"
-          link="https://x.com/GoogolGenius"
-        />
-        <AnchorButton
-          text="Stack Overflow"
-          link="https://stackoverflow.com/users/16394485/googolgenius"
-        />
-        <AnchorButton text="Email" link="mailto:erich.nguyen@outlook.com" />
+
+      <div className="Profile__right">
+        <h1 className="Profile__title">STUDENT SOFTWARE DEVELOPER</h1>
+        <p className="Profile__bio">
+          Software developer focused on the intersection of computer science and
+          medicine, with interests in computational biology and bioinformatics.
+          Experienced in full-stack web development using TypeScript, React.JS,
+          Python, and Java; currently learning C++. Projects span robotics, STEM
+          outreach, and research applying software to real-world challenges.
+        </p>
+        <a
+          className="Profile__contact-button"
+          href="https://www.linkedin.com/in/erich-nguyen"
+        >
+          CONNECT WITH ME
+        </a>
       </div>
     </div>
   );

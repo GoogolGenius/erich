@@ -1,51 +1,167 @@
 .App {
-  align-items: center;
+  background-attachment: fixed;
   background-image: url('assets/sky.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  justify-content: center;
   min-height: 100vh;
-  padding: 1.5rem;
-  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.App::before {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
 }
 
 .App__container {
-  align-items: center;
+  min-height: 100vh;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+.App__hero {
+  align-items: stretch;
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  height: 100%;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 1500px;
-  width: 100%;
+  min-height: calc(100vh - 280px);
 }
 
-.App__grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  width: 100%;
-}
-
-.App__footer {
+.App__projects {
   align-items: center;
+  bottom: 0;
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
+  gap: 1.5rem;
+  height: 280px;
+  left: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2rem;
+  position: absolute;
+  right: 0;
+  z-index: 10;
 }
 
-@media (min-width: 44em) {
+.App__projects::-webkit-scrollbar {
+  height: 8px;
+}
+
+.App__projects::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.App__projects::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.App__projects::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1024px) {
   .App__container {
-    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: visible;
   }
 
-  .App__grid > .Profile {
-    grid-column: span 2;
-    grid-row: span 2;
+  .App__hero {
+    height: auto;
+    /* flex: none; */
+    /* display: block; */
+  }
+
+  .App__projects {
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    bottom: auto;
+    gap: 1.25rem;
+    left: auto;
+    margin-top: 0;
+    /* height: auto; */
+    padding: 2rem;
+    position: relative;
+    right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .App__container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .App__hero {
+    height: auto;
+  }
+
+  .App__projects {
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    bottom: auto;
+    gap: 1rem;
+    left: auto;
+    margin-top: 0;
+    /* height: auto; */
+    padding: 2rem 1.5rem;
+    position: relative;
+    right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .App__hero {
+    min-height: calc(100vh - 210px);
+  }
+
+  .App__projects {
+    height: 210px;
+  }
+}
+
+@media (max-width: 360px) {
+  .App__container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .App__hero {
+    min-height: calc(100vh - 210px);
+  }
+
+  .App__projects {
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    bottom: auto;
+    gap: 0.75rem;
+    height: 210px;
+    left: auto;
+    padding: 1.5rem 1rem;
+    position: relative;
+    right: auto;
+  }
+
+  .App__projects::-webkit-scrollbar {
+    height: 6px;
   }
 }

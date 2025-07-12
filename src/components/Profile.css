@@ -1,71 +1,638 @@
 .Profile {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(209, 213, 219, 0.3);
-  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  max-width: none;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.Profile__left {
+  align-items: flex-end;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  background: rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 1.5rem;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 4rem;
+  padding-bottom: 11rem;
+  padding-top: 11.5rem;
+  position: relative;
 }
 
-.Profile__header--primary {
-  font-size: 3rem;
+.Profile__left::before {
+  background: linear-gradient(
+      45deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.02) 25%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%
+    );
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+/* Additional floating shape behind title */
+.Profile__title::before {
+  animation: float1 15s ease-in-out infinite;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.22) 100%
+  );
+  border-radius: 80% 20% 60% 40% / 50% 70% 30% 50%;
+  content: '';
+  height: 120px;
+  position: absolute;
+  left: -20px;
+  top: -10px;
+  width: 350px;
+  z-index: -1;
+}
+
+.Profile__title {
+  color: white;
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  position: relative;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.Profile__bio {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  position: relative;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.Profile__contact-button {
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
   font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  z-index: 2;
 }
 
-.Profile__header--secondary {
-  font-weight: 600;
-  margin-bottom: 1.5rem;
+.Profile__contact-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
 
-.Profile__links {
-  align-items: center;
+/* Floating shape behind contact button */
+.Profile__contact-button::after {
+  animation: float2 18s ease-in-out infinite reverse;
+  background: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    transparent 60%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  border-radius: 40% 60% 80% 20% / 70% 30% 60% 40%;
+  content: '';
+  height: 80px;
+  position: absolute;
+  right: -15px;
+  bottom: -20px;
+  width: 140px;
+  z-index: -1;
+}
+
+.Profile__right {
+  align-items: flex-start;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 4rem;
+  padding-bottom: 11rem;
+  padding-top: 11.5rem;
+  position: relative;
 }
 
-@media (max-width: 44em) {
-  .Profile__links {
-    align-items: unset;
-    flex-direction: column;
+.Profile__right::before {
+  background: linear-gradient(
+      45deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.02) 25%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%
+    );
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.Profile__right::after {
+  animation: float3 10s ease-in-out infinite;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  content: '';
+  height: 250px;
+  position: absolute;
+  right: 15%;
+  top: 15%;
+  width: 180px;
+  z-index: 1;
+}
+
+.Profile__left::after {
+  animation: float2 12s ease-in-out infinite reverse;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.35) 100%
+  );
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  content: '';
+  height: 200px;
+  position: absolute;
+  left: 15%;
+  bottom: 20%;
+  width: 200px;
+  z-index: 1;
+}
+
+.Profile__right::before {
+  background: linear-gradient(
+      45deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.02) 25%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%
+    );
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.Profile__card {
+  /* width: 350px; */
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 3;
+}
+
+/* Floating shape behind profile card */
+.Profile__card::before {
+  animation: float3 14s ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 45%,
+    rgba(255, 255, 255, 0.14) 100%
+  );
+  border-radius: 20% 80% 40% 60% / 80% 20% 70% 30%;
+  content: '';
+  height: 300px;
+  position: absolute;
+  left: -30px;
+  top: 50px;
+  width: 200px;
+  z-index: -1;
+}
+
+/* Additional corner shape */
+.Profile__name::after {
+  animation: float1 20s ease-in-out infinite reverse;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.06) 0%,
+    transparent 80%
+  );
+  border-radius: 70% 30% 50% 50% / 30% 70% 50% 50%;
+  content: '';
+  height: 150px;
+  position: absolute;
+  right: -50px;
+  top: -30px;
+  width: 120px;
+  z-index: -1;
+}
+
+.Profile__portrait {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  display: block;
+  height: 450px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.Profile__name {
+  background: none;
+  bottom: -35px;
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0.25em 0;
+  position: absolute;
+  right: 0;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 4;
+}
+
+.Profile__description {
+  bottom: -50px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+  z-index: 4;
+}
+
+.Profile__social-icons {
+  display: flex;
+  gap: 1rem;
+  left: 1rem;
+  position: absolute;
+  top: 1.5rem;
+  z-index: 4;
+}
+
+.Profile__social-icon {
+  align-items: center;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  font-size: 16px;
+  height: 40px;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 40px;
+}
+
+.Profile__social-icon-svg {
+  filter: brightness(0) invert(1);
+  height: 20px;
+  width: 20px;
+}
+
+.Profile__social-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+@keyframes float1 {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05) rotate(180deg);
   }
 }
 
-.Profile__links > .AnchorButton > .AnchorButton__anchor {
-  background-color: rgba(255, 255, 255, 0.1);
+@keyframes float2 {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) scale(0.95) rotate(-180deg);
+  }
 }
 
-.Profile__links > .AnchorButton > .AnchorButton__anchor:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+@keyframes float3 {
+  0%,
+  100% {
+    transform: translateX(0px) scale(1) rotate(45deg);
+  }
+  50% {
+    transform: translateX(10px) scale(1.1) rotate(225deg);
+  }
 }
 
-.discord__button {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(209, 213, 219, 0.3);
-  border-radius: 12px;
-  color: #414aaf;
-  display: inline-block;
-  height: fit-content;
-  padding: 0.75em 1.5em;
-  text-align: center;
-  text-decoration: none;
-  transition: 0.4s ease;
+@media (max-width: 1024px) {
+  .Profile {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .Profile__name {
+    bottom: -25px;
+    font-size: 2rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .Profile__description {
+    bottom: -45px;
+    font-size: 0.9rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .Profile__left {
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: none;
+    justify-content: center;
+    min-height: auto;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .Profile__right {
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .Profile__title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+  }
+
+  .Profile__bio {
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .Profile__card {
+    margin-bottom: 2rem;
+    width: 320px;
+  }
+
+  .Profile__portrait {
+    height: 400px;
+    margin-top: 1.5rem;
+  }
+
+  .Profile__social-icons {
+    justify-content: space-between;
+    left: auto;
+    position: relative;
+    top: auto;
+    width: 320px;
+    /* margin-top: 2rem; */
+  }
 }
 
-.discord__button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #252a60;
-  cursor: pointer;
-  transform: scale(1.05);
-  transition: 0.4s ease;
+@media (max-width: 768px) {
+  .Profile__left {
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .Profile__right {
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .Profile__card {
+    /* width: 280px; */
+    margin-bottom: 2rem;
+  }
+
+  .Profile__portrait {
+    height: 380px;
+  }
+
+  .Profile__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+    max-width: 500px;
+  }
+
+  .Profile__bio {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    max-width: 400px;
+  }
+
+  .Profile__contact-button {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .Profile__name {
+    bottom: -25px;
+    font-size: 2rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .Profile__description {
+    bottom: -45px;
+    font-size: 0.9rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
 }
 
-.underline {
-  box-shadow: inset 0 -0.4em #414aaf80;
-  font: inherit;
+@media (max-width: 360px) {
+  .Profile__left {
+    padding: 1.5rem 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .Profile__right {
+    padding: 1.5rem 1rem;
+  }
+
+  .Profile__card {
+    margin-bottom: 2.5rem;
+    width: 240px;
+  }
+
+  .Profile__portrait {
+    height: 320px;
+  }
+
+  .Profile__title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .Profile__bio {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+    max-width: 300px;
+  }
+
+  .Profile__contact-button {
+    font-size: 0.85rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .Profile__social-icons {
+    /* margin-top: 2.5rem; */
+    gap: 6px;
+    justify-content: space-between;
+    left: auto;
+    position: relative;
+    top: auto;
+    width: 240px;
+  }
+
+  .Profile__social-icon {
+    font-size: 14px;
+    height: 36px;
+    width: 36px;
+  }
+
+  .Profile__social-icon-svg {
+    height: 18px;
+    width: 18px;
+  }
+
+  .Profile__name {
+    bottom: -18px;
+    font-size: 1.2rem;
+  }
+
+  .Profile__description {
+    bottom: -38px;
+    font-size: 0.7rem;
+  }
 }
+/* @media (max-width: 360px) {
+  .Profile__left {
+    padding: 1.25rem 0.75rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .Profile__right {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .Profile__card {
+    width: 220px;
+    margin-bottom: 3rem;
+  }
+
+  .Profile__portrait {
+    height: 300px;
+  }
+
+  .Profile__title {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .Profile__bio {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+    max-width: 280px;
+  }
+
+  .Profile__contact-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .Profile__social-icons {
+    margin-top: 2.5rem;
+    gap: 0.6rem;
+  }
+
+  .Profile__social-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .Profile__social-icon-svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .Profile__name {
+    font-size: 1.1rem;
+    bottom: -16px;
+  }
+
+  .Profile__description {
+    font-size: 0.65rem;
+    bottom: -34px;
+  }
+} */

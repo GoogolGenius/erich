@@ -9,14 +9,18 @@ const App: FC = (): JSX.Element => {
   return (
     <div className="App">
       <div className="App__container">
-        <div className="App__grid">
+        <div className="App__hero">
           <Profile />
-          {projects.map((project, index) => (
-            <Card key={index} {...project} />
-          ))}
         </div>
-        <div className="App__footer">
-          <Footer />
+        <div className="App__projects-container">
+          <div className="App__projects">
+            {projects.map((project, index) => (
+              <Card key={index} {...project} />
+            ))}
+          </div>
+          <div className="App__footer">
+            <Footer />
+          </div>
         </div>
       </div>
     </div>
