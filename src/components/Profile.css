@@ -46,7 +46,7 @@
 }
 
 /* Additional floating shape behind title */
-.Profile__title::before {
+/* .Profile__title::before {
   animation: float1 15s ease-in-out infinite;
   background: linear-gradient(
     120deg,
@@ -62,7 +62,7 @@
   top: -10px;
   width: 350px;
   z-index: -1;
-}
+} */
 
 .Profile__title {
   color: white;
@@ -116,7 +116,7 @@
 }
 
 /* Floating shape behind contact button */
-.Profile__contact-button::after {
+/* .Profile__contact-button::after {
   animation: float2 18s ease-in-out infinite reverse;
   background: linear-gradient(
     -45deg,
@@ -132,7 +132,7 @@
   right: -15px;
   width: 140px;
   z-index: -1;
-}
+} */
 
 .Profile__right {
   align-items: flex-start;
@@ -153,7 +153,7 @@
   background: linear-gradient(
       45deg,
       transparent 0%,
-      rgba(255, 255, 255, 0.02) 25%,
+      rgba(161, 14, 14, 0.985) 25%,
       transparent 50%
     ),
     radial-gradient(
@@ -170,7 +170,7 @@
   z-index: 1;
 }
 
-.Profile__right::after {
+/* .Profile__right::after {
   animation: float3 10s ease-in-out infinite;
   background: linear-gradient(
     135deg,
@@ -186,9 +186,9 @@
   top: 15%;
   width: 180px;
   z-index: 1;
-}
+} */
 
-.Profile__left::after {
+/* .Profile__left::after {
   animation: float2 12s ease-in-out infinite reverse;
   background: linear-gradient(
     45deg,
@@ -204,7 +204,7 @@
   position: absolute;
   width: 200px;
   z-index: 1;
-}
+} */
 
 .Profile__right::before {
   background: linear-gradient(
@@ -235,7 +235,7 @@
 }
 
 /* Floating shape behind profile card */
-.Profile__card::before {
+/* .Profile__card::before {
   animation: float3 14s ease-in-out infinite;
   background: linear-gradient(
     90deg,
@@ -251,7 +251,7 @@
   top: 50px;
   width: 200px;
   z-index: -1;
-}
+} */
 
 /* Additional corner shape */
 .Profile__name::after {
