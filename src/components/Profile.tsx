@@ -1,4 +1,4 @@
-import avatar from '../assets/erich-close-headshot.jpeg';
+import avatar from '../assets/pfp.jpg';
 import './Profile.css';
 import { FC } from 'react';
 
@@ -91,17 +91,21 @@ const Profile: FC = (): JSX.Element => {
       </div>
 
       <div className="Profile__right">
-        <h1 className="Profile__title">STUDENT SOFTWARE DEVELOPER</h1>
+        <h1 className="Profile__title">CS + Comp Bio @ JHU</h1>
         <p className="Profile__bio">
-          Student dev focused on the intersection of CS and bio, with interests
-          in computational biology and bioinformatics. Experienced in full-stack
-          web dev using TypeScript, React.JS, Python, and Java; learning C++.
-          Projects span robotics, STEM outreach, and research involving barcoded
-          transposon libraries as well as ML models on Marfan syndrome.
+          First-year student and Hodson Trust Scholar at Johns Hopkins
+          University studying Computer Science with a focus in Computational
+          Biology. Experienced in bioinformatics, machine learning, and
+          full-stack software development. Interested in applying artificial
+          intelligence to lower costs and provide better, more individualized
+          healthcare at the genome level. Passionate about scientific research
+          and building tools to advance humanity.
         </p>
         <a
           className="Profile__contact-button"
           href="https://www.linkedin.com/in/erich-nguyen"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           CONNECT WITH ME
         </a>

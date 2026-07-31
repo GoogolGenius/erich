@@ -10,8 +10,8 @@
 
 .Profile__left {
   align-items: flex-end;
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  /* backdrop-filter: blur(20px) saturate(160%); */
+  /* -webkit-backdrop-filter: blur(20px) saturate(160%); */
   background: rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
@@ -45,35 +45,16 @@
   z-index: 1;
 }
 
-/* Additional floating shape behind title */
-/* .Profile__title::before {
-  animation: float1 15s ease-in-out infinite;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.18) 0%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.22) 100%
-  );
-  border-radius: 80% 20% 60% 40% / 50% 70% 30% 50%;
-  content: '';
-  height: 120px;
-  left: -20px;
-  position: absolute;
-  top: -10px;
-  width: 350px;
-  z-index: -1;
-} */
-
 .Profile__title {
   color: white;
   font-size: clamp(3rem, 7vw, 5rem);
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 0.9;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   max-width: 500px;
   position: relative;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
   z-index: 2;
 }
@@ -85,14 +66,14 @@
   margin-bottom: 2rem;
   max-width: 500px;
   position: relative;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
 
 .Profile__contact-button {
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   color: white;
@@ -110,35 +91,16 @@
 }
 
 .Profile__contact-button:hover {
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   transform: translateY(-2px);
 }
-
-/* Floating shape behind contact button */
-/* .Profile__contact-button::after {
-  animation: float2 18s ease-in-out infinite reverse;
-  background: linear-gradient(
-    -45deg,
-    rgba(255, 255, 255, 0.12) 0%,
-    transparent 60%,
-    rgba(255, 255, 255, 0.15) 100%
-  );
-  border-radius: 40% 60% 80% 20% / 70% 30% 60% 40%;
-  bottom: -20px;
-  content: '';
-  height: 80px;
-  position: absolute;
-  right: -15px;
-  width: 140px;
-  z-index: -1;
-} */
 
 .Profile__right {
   align-items: flex-start;
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -148,63 +110,6 @@
   padding-top: clamp(7.5rem, 20vh, 11.5rem);
   position: relative;
 }
-
-.Profile__right::before {
-  background: linear-gradient(
-      45deg,
-      transparent 0%,
-      rgba(161, 14, 14, 0.985) 25%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 20% 80%,
-      rgba(255, 255, 255, 0.05) 0%,
-      transparent 50%
-    );
-  bottom: 0;
-  content: '';
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-}
-
-/* .Profile__right::after {
-  animation: float3 10s ease-in-out infinite;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.15) 0%,
-    transparent 40%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  content: '';
-  height: 250px;
-  position: absolute;
-  right: 15%;
-  top: 15%;
-  width: 180px;
-  z-index: 1;
-} */
-
-/* .Profile__left::after {
-  animation: float2 12s ease-in-out infinite reverse;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.25) 0%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.35) 100%
-  );
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  bottom: 20%;
-  content: '';
-  height: 200px;
-  left: 15%;
-  position: absolute;
-  width: 200px;
-  z-index: 1;
-} */
 
 .Profile__right::before {
   background: linear-gradient(
@@ -234,50 +139,14 @@
   z-index: 3;
 }
 
-/* Floating shape behind profile card */
-/* .Profile__card::before {
-  animation: float3 14s ease-in-out infinite;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    transparent 45%,
-    rgba(255, 255, 255, 0.14) 100%
-  );
-  border-radius: 20% 80% 40% 60% / 80% 20% 70% 30%;
-  content: '';
-  height: 300px;
-  left: -30px;
-  position: absolute;
-  top: 50px;
-  width: 200px;
-  z-index: -1;
-} */
-
-/* Additional corner shape */
-.Profile__name::after {
-  animation: float1 20s ease-in-out infinite reverse;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.06) 0%,
-    transparent 80%
-  );
-  border-radius: 70% 30% 50% 50% / 30% 70% 50% 50%;
-  content: '';
-  height: 150px;
-  position: absolute;
-  right: -50px;
-  top: -30px;
-  width: 120px;
-  z-index: -1;
-}
-
 .Profile__portrait {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   display: block;
   height: 450px;
-  object-fit: cover;
+  object-fit:cover;
+  object-position: right;
   width: 100%;
 }
 
@@ -314,7 +183,7 @@
 .Profile__social-icons {
   display: flex;
   gap: 1rem;
-  left: 1rem;
+  left: 1.5rem;
   position: absolute;
   top: 1.5rem;
   z-index: 4;
@@ -347,36 +216,6 @@
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
-}
-
-@keyframes float1 {
-  0%,
-  100% {
-    transform: translateY(0px) scale(1) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) scale(1.05) rotate(180deg);
-  }
-}
-
-@keyframes float2 {
-  0%,
-  100% {
-    transform: translateY(0px) scale(1) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-15px) scale(0.95) rotate(-180deg);
-  }
-}
-
-@keyframes float3 {
-  0%,
-  100% {
-    transform: translateX(0px) scale(1) rotate(45deg);
-  }
-  50% {
-    transform: translateX(10px) scale(1.1) rotate(225deg);
-  }
 }
 
 @media (max-width: 1024px) {
@@ -447,7 +286,7 @@
   }
 
   .Profile__portrait {
-    height: 400px;
+    height: 380px;
     margin-top: 1.5rem;
   }
 
@@ -536,6 +375,8 @@
 
   .Profile__portrait {
     height: 320px;
+    object-position: right;
+
   }
 
   .Profile__title {
@@ -585,6 +426,7 @@
     font-size: 0.7rem;
   }
 }
+
 /* @media (max-width: 360px) {
   .Profile__left {
     padding: 1.25rem 0.75rem;

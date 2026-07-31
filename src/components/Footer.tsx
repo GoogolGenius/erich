@@ -1,4 +1,4 @@
-import links from '../data/links';
+// import links from '../data/links';
 import './Footer.css';
 import { FC } from 'react';
 
@@ -6,7 +6,7 @@ const Footer: FC = (): JSX.Element => {
   return (
     <div className="Footer">
       <div className="Footer__container">
-        Inspired by{' '}
+        {/* Inspired by{' '}
         <a
           href={links.rxsto}
           target="_blank"
@@ -15,7 +15,9 @@ const Footer: FC = (): JSX.Element => {
         >
           rxsto
         </a>
-        . Sky background created by{' '}
+        . */}
+        Portrait photographed by Kathryn Delsing
+        {/* {' '}
         <a
           href={links.pikisuperstar}
           target="_blank"
@@ -24,7 +26,7 @@ const Footer: FC = (): JSX.Element => {
         >
           pikisuperstar
         </a>
-        .
+        . */}
       </div>
     </div>
   );
