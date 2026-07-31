@@ -10,8 +10,8 @@
 
 .Profile__left {
   align-items: flex-end;
-  /* backdrop-filter: blur(20px) saturate(160%); */
-  /* -webkit-backdrop-filter: blur(20px) saturate(160%); */
+  /* backdrop-filter: blur(7.5px) saturate(160%); */
+  /* -webkit-backdrop-filter: blur(7.5px) saturate(160%); */
   background: rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
@@ -71,8 +71,8 @@
 }
 
 .Profile__contact-button {
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(7.5px) saturate(160%);
+  -webkit-backdrop-filter: blur(7.5px) saturate(160%);
   background: rgba(255, 255, 255, 0);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
@@ -98,8 +98,8 @@
 
 .Profile__right {
   align-items: flex-start;
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(7.5px) saturate(160%);
+  -webkit-backdrop-filter: blur(7.5px) saturate(160%);
   background: rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
@@ -191,8 +191,8 @@
 
 .Profile__social-icon {
   align-items: center;
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(7.5px) saturate(160%);
+  -webkit-backdrop-filter: blur(7.5px) saturate(160%);
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
