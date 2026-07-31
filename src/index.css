@@ -28,7 +28,7 @@ html:focus-within {
 }
 
 body {
-  background-color: #7d82b7;
+  background-color: #a3b8c2;
   color: #1e262b;
   line-height: 1.5;
   min-height: 100vh;
@@ -82,16 +82,16 @@ code {
 }
 
 ::selection {
-  background-color: #7d82b7;
+  background-color: #a3b8c2;
   color: #fff;
 }
 
 ::-moz-selection {
-  background-color: #7d82b7;
+  background-color: #a3b8c2;
   color: #fff;
 }
 
 ::-webkit-selection {
-  background-color: #7d82b7;
+  background-color: #a3b8c2;
   color: #fff;
 }
