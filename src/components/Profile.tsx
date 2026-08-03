@@ -45,7 +45,7 @@ const Profile: FC = (): JSX.Element => {
             />
           </a>
           <a
-            href="mailto:erich.nguyen@outlook.com"
+            href="mailto:enguye28@jhu.edu"
             className="Profile__social-icon"
             target="_blank"
             rel="noopener noreferrer"
@@ -85,7 +85,7 @@ const Profile: FC = (): JSX.Element => {
         {/* Profile Card */}
         <div className="Profile__card">
           <img src={avatar} alt="Erich Nguyen" className="Profile__portrait" />
-          <h2 className="Profile__name">ERICH NGUYEN</h2>
+          <h2 className="Profile__name">Erich Nguyen</h2>
           <p className="Profile__description">@GoogolGenius</p>
         </div>
       </div>
@@ -107,7 +107,7 @@ const Profile: FC = (): JSX.Element => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          CONNECT WITH ME
+          Connect With Me
         </a>
       </div>
     </div>
